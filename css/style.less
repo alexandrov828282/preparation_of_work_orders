@@ -14,22 +14,56 @@ body{
 .start-block{
     display: flex;
     flex-direction: column;
+    align-items: center;
     border-radius: 20px;
     background-color: rgba(0, 0, 0, 0.400);
     padding: 20px;
     font-family: Arial, Helvetica, sans-serif;
     color: @color-text;
-}
-
-.dateandtime-block{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
+    
+    & input{
+        margin-bottom: 20px;
+        text-align: center;
+        // margin: 0 5px;
+        color: @color-text;
+        // color: rgb(95, 95, 95);
+        background-color: rgba(255, 255, 255, 0.1);
+        font-size: 50px;
+        border-width: 0;
+        border-radius: 10px;
+        margin: 0 3px 20px 3px;
+    }
 }
 
 .startdate{
     max-width: 340px;
+}
+
+.starttime{
+    position: relative;
+    & input{
+        width: 130px;
+        text-align: center;
+    }
+    & .img-time-0800{
+        position: absolute;
+        left: 9px;
+        top: 10px;
+    }
+    & .img-time-2000{
+        position: absolute;
+        left: 152px;
+        top: 10px;
+    }
+}
+
+.numorder-block{
+    display: flex;
+    flex-direction: row;
+    & input
+    {
+        width: 70px;
+    }
 }
 
 h1{
@@ -37,40 +71,38 @@ h1{
     margin-bottom: 50px;
 }
 
-input{
-    color: @color-text;
-    background-color: rgba(255, 255, 255, 0.2);
-    font-size: 50px;
-    border-width: 0;
-}
-
 p{
     font-size: 25px;
     margin: 10px;
 }
 
-// input[type="date"]{
-//     // outline: none;
-// }
+input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    opacity: 0.5;
+    filter: invert(0.95);
+}
 
-// input[type="date"]::-webkit-calendar-picker-indicator {
-//     cursor: pointer;
-//     opacity: 0.65;
-//     filter: invert(0.95);
-//   }
-  
-//   input[type="date"]::-webkit-calendar-picker-indicator:hover {
-//     opacity: 1
-//   }
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+    opacity: 1
+}
 
-//   //====================================================
-
-//   input[type="time"]::after
-// {
-//     content: "";
-//     background: #FFF;
-//     height: 20px;
-//     width: 10px;
-//     position: absolute;
-//     margin: 0 -10px;
-// }
+// input[type="text"]{
+    //     -ms-user-select: none;
+    //     -moz-user-select: none;
+    //     -khtml-user-select: none;
+    //     -webkit-user-select: none;
+    // }
+    
+    // .noselect{
+        //     -ms-user-select: none;
+        //     -moz-user-select: none;
+        //     -khtml-user-select: none;
+        //     -webkit-user-select: none;
+        // }
+        
+        .noselect{
+            user-select: none;
+        }
+        
+        
+        
