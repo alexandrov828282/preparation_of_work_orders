@@ -1,4 +1,7 @@
 @color-text: rgb(192, 190, 190);
+@bg-blackout: rgba(0, 0, 0, 0.400);
+@bg-clarification: rgba(255, 255, 255, 0.1);
+@bg-accentElem: rgb(38, 255, 0);
 
 body{
     background: url(/img/bg.jpg) no-repeat fixed center;
@@ -16,7 +19,7 @@ body{
     flex-direction: column;
     align-items: center;
     border-radius: 20px;
-    background-color: rgba(0, 0, 0, 0.400);
+    background-color: @bg-blackout;
     padding: 20px;
     font-family: Arial, Helvetica, sans-serif;
     color: @color-text;
@@ -24,10 +27,8 @@ body{
     & input{
         margin-bottom: 20px;
         text-align: center;
-        // margin: 0 5px;
         color: @color-text;
-        // color: rgb(95, 95, 95);
-        background-color: rgba(255, 255, 255, 0.1);
+        background-color: @bg-clarification;
         font-size: 50px;
         border-width: 0;
         border-radius: 10px;
@@ -58,12 +59,36 @@ body{
 }
 
 .numorder-block{
+    // position: relative;
     display: flex;
     flex-direction: row;
     & input
     {
         width: 70px;
     }
+    img{
+        margin: 0 5px;
+        border-radius: 10px;
+        background: @bg-clarification;
+    }
+    .img-order-minus{
+        position: relative;
+        // bottom: 1px;
+        width: 29px;
+        height: 7px;
+        padding: 26px 20px 27px 20px;
+    }
+    .img-order-plus{
+        width: 29px;
+        height: 28px;
+        padding: 16px 20px;
+    }
+}
+
+.minus{
+    position:absolute;
+    left: 25px;
+    top: 25px;
 }
 
 h1{
@@ -86,23 +111,19 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     opacity: 1
 }
 
-// input[type="text"]{
-    //     -ms-user-select: none;
-    //     -moz-user-select: none;
-    //     -khtml-user-select: none;
-    //     -webkit-user-select: none;
-    // }
-    
-    // .noselect{
-        //     -ms-user-select: none;
-        //     -moz-user-select: none;
-        //     -khtml-user-select: none;
-        //     -webkit-user-select: none;
-        // }
-        
-        .noselect{
-            user-select: none;
-        }
-        
-        
-        
+.noselect{
+    user-select: none;
+}
+
+.hide{
+    display: none;
+}
+
+.btnWork p{
+    padding: 10px 20px;
+    background-color: @bg-accentElem;
+    color: black;
+    border-radius: 10px;
+}
+
+

@@ -54,6 +54,27 @@ body {
 .numorder-block input {
   width: 70px;
 }
+.numorder-block img {
+  margin: 0 5px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+}
+.numorder-block .img-order-minus {
+  position: relative;
+  width: 29px;
+  height: 7px;
+  padding: 26px 20px 27px 20px;
+}
+.numorder-block .img-order-plus {
+  width: 29px;
+  height: 28px;
+  padding: 16px 20px;
+}
+.minus {
+  position: absolute;
+  left: 25px;
+  top: 25px;
+}
 h1 {
   margin-top: 50px;
   margin-bottom: 50px;
@@ -72,4 +93,13 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 }
 .noselect {
   user-select: none;
+}
+.hide {
+  display: none;
+}
+.btnWork p {
+  padding: 10px 20px;
+  background-color: #26ff00;
+  color: black;
+  border-radius: 10px;
 }

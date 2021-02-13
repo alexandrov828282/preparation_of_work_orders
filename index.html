@@ -12,35 +12,32 @@
     
     <div class="container">
         <div class="start-block">
-            <!-- <div class="dateandtime-block"> -->
-                <p class="noselect">Дата открытия наряда</p>
-                <input class="startdate" type="date" value="2021-02-09">
-                <p class="noselect">Время открытия наряда</p>
-                
-                <div class="starttime">
-                    <input id="noselect" class="noselect" type="text" disabled>
-                    <input id="noselect" class="noselect" type="text" disabled>
-                    <img class="img-time-0800" src="/img/img-0800.png" alt="08:00">
-                    <img class="img-time-2000" src="/img/img-0800.png" alt="08:00">
-                    <!-- <input id="noselect" class="noselect" type="text" value="08:00" disabled>
-                    <input id="noselect" class="noselect" type="text" value="20:00" disabled> -->
-                </div>
-                
-                <p class="noselect">Количество нарядов</p>
-                
-                <div class="numorder-block">
-                    <!-- <input type="text" value="&lt;" disabled> -->
-                    <input type="text" value="-" disabled>
-                    <input type="text" value="1">
-                    <!-- <input type="text" value="&gt;" disabled> -->
-                    <input type="text" value="+" disabled>
-                </div>
-                
-                <!-- </div> -->
+            <p class="noselect">Дата открытия наряда</p>
+            <input class="startdate" type="date" value="2021-02-09">
+            <p class="noselect">Время открытия наряда</p>
+            
+            <div id="starttime" class="starttime">
+                <input class="noselect" type="text" disabled>
+                <input class="noselect" type="text" disabled>
+                <img id="img-time-0800" class="img-time-0800" src="/img/img-0800.png" alt="08:00">
+                <img id="img-time-2000" class="img-time-2000 hide" src="/img/img-2000-green.png" alt="08:00">
+                <img id="img-time-0800-noactiv" class="img-time-0800 hide" src="/img/img-0800-noactiv.png" alt="08:00">
+                <img id="img-time-2000-noactiv" class="img-time-2000" src="/img/img-2000-noactiv.png" alt="08:00">
+            </div>
+            <p class="noselect">Количество нарядов</p>
+            <div class="numorder-block">
+                <img id="img-order-minus" class="img-order-minus" src="/img/img-minus.png" alt="minus">
+                <input id="numorders" type="text" value="1">
+                <img id="img-order-plus" class="img-order-plus" src="/img/img-plus.png" alt="plus">
+            </div>
+            <div class="btnWork">
+                <p> 
+                    <b>Погнали</b>
+                </p>
             </div>
         </div>
-        
-        <script src="/js/script.js"></script>
-    </body>
-    </html>
+    </div>
     
+    <script src="/js/script.js"></script>
+</body>
+</html>
